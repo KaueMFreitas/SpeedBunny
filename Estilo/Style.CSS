@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+:root {
+    --text-borda: 2px 0px black, 0px 2px black, -2px 0px black, 0px -2px black;
+}
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #9904D9;
+    font-size: 5vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tela {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+h1 {
+    width: auto;
+
+    font-size: 3em;
+    color: #2C0AA6;
+    
+    text-shadow: var(--text-borda);
+    text-align: center;
+    margin: 0px 10px 50px;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+}
+
+form {
+    font-size: 2em;
+    background-color: none /* #6907F2 */;
+}
+fieldset {
+    border: none;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 1em;
+}
+legend {
+    display: none;
+}
+label {
+    display: block;
+    margin-left: .3em;
+    margin-bottom: 5px;
+    color: #DCE6F2;
+    text-shadow: var(--text-borda);
+    font-weight: bold;
+}
+textarea {
+    color: black;
+    border-radius: 35px;
+    border: 2px solid black;
+    width: 7em;
+    padding: .5em;
+}
+#btn {
+    display: block;
+    width: 100%;
+    margin: 2rem 1em 3rem;
+}
+input {
+    padding: 10px .3em;
+    color: #DCE6F2;
+    text-shadow: var(--text-borda);
+    border: 2px solid black;
+    border-radius: 35px;
+    background-color: #2c0aa6;
+    margin-bottom: 30px;
+}
+#regis {
+    color: rgb(255, 57, 57);
+    text-shadow: var(--text-borda);
+}
