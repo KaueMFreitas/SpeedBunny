@@ -12,20 +12,17 @@
 </head>
 <body>
     <div id="tela">
-        <h1>SpeedBunny</h1>
-        
-        <div id="foto">
             <img src="Imagens/logo.png" alt="Cabeça de um coelho">
             <form action="#" method="get" onsubmit="return valido(this)">
                 <legend>Login</legend>
                 <fieldset>
                     <div class="text">
                         <label> Login: </label>
-                        <textarea name="User" id="login" cols="30" rows="1" placeholder="Usuario" required></textarea>
+                        <input type="text" name="User" id="login" class="focar" required>
                     </div>
                     <div class="text">
                         <label> Senha: </label>
-                        <textarea name="Senha" id="senha" cols="30" rows="1" placeholder="senha" required ></textarea>
+                        <input type="password" name="Senha" id="senha" class="focar" minlength="6" maxlength="16" required>
                     </div>
                 </fieldset>
                 <div id="btn">
@@ -33,8 +30,11 @@
                     <input type="button" value="registrar"  id="regis" onclick="registrar()">
                 </div>
             </form>
-        </div>
     </div>
+
+    <footer>
+        <p>@Copyright 2022 - SpeedBunny (fake company)</p>
+    </footer>
 
     <script>
         function registrar() {
