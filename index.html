@@ -12,35 +12,80 @@
 </head>
 <body>
     <div id="tela">
-            <img src="Imagens/logo.png" alt="Cabeça de um coelho">
-            <form action="#" method="get" onsubmit="return valido(this)">
-                <legend>Login</legend>
-                <fieldset>
+        <img src="Imagens/logo.png" alt="Cabeça de um coelho">
+        <form id="area1" action="#" method="get" onsubmit="valid">
+            <legend>Login</legend>
+            <fieldset>
+                <div class="text">
+                    <label> Login : </label>
+                    <input type="text" name="User" id="login" class="btn focar" required>
+                </div>
+                <div class="text">
+                    <label> Senha:</label>
+                    <input type="password" name="Senha" id="senha" class="btn focar" minlength="6" maxlength="16" required>
+                </div>
+            </fieldset>
+            <input type="submit" value="Correr" id="correr" onclick="logar()">
+            <input type="button" value="Registrar"  id="regis" class="hidden-or-show" onclick="estado()">
+        </form>
+
+        <form id="area2" action="#" method="get" style="display: none;" onsubmit="Valid">
+            <legend>Registrar</legend>
+            <fieldset>
+                <div id="reg">
+                    <div class="text">
+                        <label> Nome: </label>
+                        <input type="text" name="nome" id="nome" class="btn focar" required>
+                    </div>
+                    <div class="text">
+                        <label> E-mail: </label>
+                        <input type="email" name="email" id="email" class="btn btn-sec focar" required>
+                    </div>
                     <div class="text">
                         <label> Login: </label>
-                        <input type="text" name="User" id="login" class="focar" required>
+                        <input type="text" name="User" id="login" class="btn focar" required>
                     </div>
                     <div class="text">
                         <label> Senha: </label>
-                        <input type="password" name="Senha" id="senha" class="focar" minlength="6" maxlength="16" required>
+                        <input type="password" name="Senha" id="senha" class="btn btn-sec focar" minlength="6" maxlength="16" required>
                     </div>
-                </fieldset>
-                <div id="btn">
-                    <input type="submit" value="Correr" id="correr" onclick="logar()">
-                    <input type="button" value="registrar"  id="regis" onclick="registrar()">
                 </div>
-            </form>
+            </fieldset>
+            <input type="submit" value="Finalizar" id="correr" class="func" onclick="logar()">
+            <input type="button" value="Logar"  id="regis" class="func hidden-or-show" onclick="estado()">
+        </form>
     </div>
 
     <footer>
-        <p>@Copyright 2022 - SpeedBunny (fake company)</p>
+        <p>SpeedBunny (fake company) - não utilize informações reais </p>
     </footer>
 
     <script>
-        function registrar() {
-            alert("Essa função ainda não existe");
+        var btn = document.querySelector('.hidden-or-show');
+        var area1 = document.querySelector('#area1');
+        var area2 = document.querySelector('#area2');
+
+        function estado() {
+            if(area1.style.display == 'block' || area2.style.display === 'none') {
+                area1.style.display = 'none';
+
+                area2.style.display = 'block';
+            } else {
+                area1.style.display = 'block';
+
+                area2.style.display = 'none';
+            }
         }
 
+        // function valid() {
+        //     if (document.getElementById('btn').value === "") {
+        //         alert('Complete os campos');
+        //         return false;
+        //     } else (
+        //         alert('Ainda não existe um banco de dados')
+        //     )
+        //     return true;
+        // }
     </script>
 </body>
 </html>

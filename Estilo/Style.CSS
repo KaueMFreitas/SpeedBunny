@@ -41,18 +41,20 @@ img { /* Logo do coelho */
     margin-right: auto;
 }
 
-
+/* Configurações de login*/
 form { /* Formulario de login */
     background-color: none /* #6907F2 */;
     
     font-size: 2em;
 }
+
 fieldset { /* Aréa do login */
     width: 1em;
     
-    margin: 0 auto -35px;
+    margin: 0 auto;
     
     border: none;
+    
 }
 
 legend { /* legenda do Login */
@@ -66,8 +68,7 @@ label { /* Titulo das aréas */
     text-shadow: var(--text-borda);
     font-weight: bold;
 }
-#login,
-#senha {  /* aréas de informação */
+.btn {  /* aréas de informação */
     width: 6em;
 
     background-color: var(--background-color4);
@@ -83,34 +84,30 @@ label { /* Titulo das aréas */
     margin: 10px 0 .6em;
     transition: all ease-in-out .5s;
 }
-#login:focus,
-#senha:focus {  /* aréas de informação focada */
+.btn:focus {  /* aréas de informação focada */
     outline: none;
     border-color: red;
 }
 
-#btn { /* aréa dos botões */
-    display: block;
-
-    width: 100%;
-    
-    margin: 2rem 1em 3rem;
-}
 #correr,
 #regis { /* botões */
+    font-size: .9em;
+
     background-color: var(--btn-color);
     
     color: #DCE6F2;
     text-shadow: var(--text-borda);
 
-    padding: 10px .3em;
+    padding: 10px .5em;
     
-    margin-bottom: 30px;
+    margin: 10px .3em 10px .6em;
     
     border: 2px solid black;
     border-radius: 35px;
 
     cursor: pointer;
+
+    letter-spacing: 2px;
 }
 #correr:focus,
 #regis:focus { /* botões */
@@ -122,6 +119,22 @@ label { /* Titulo das aréas */
     text-shadow: var(--text-borda);
 }
 
+/* configurações de registro */
+
+#area2 fieldset {
+    width: 1em;
+    height: 7em;
+}
+
+#reg {
+    overflow-y: scroll;
+
+    height: 100%;
+
+    padding-top: .8em;
+}
+
+/* área rodapé */
 
 footer { /* Rodapé */
     position: fixed;
@@ -162,9 +175,9 @@ footer p { /* Texto do rodapé */
     legend { /* legenda do Login */
         display: block;
         
-        transform: translate(3em, .8em);
+        transform: translate(4.5em, .8em);
         
-        width: 4em;
+        width: 4.2em;
         
         background-color: var(--background-color2);
         
@@ -178,11 +191,12 @@ footer p { /* Texto do rodapé */
         font-size: .4em;
         text-shadow: var(--text-borda);
         color: var(--text-color4);
+        letter-spacing: 3px;
     }
     fieldset { /* Aréa do login */
         float: right;
 
-        height: 2.3em;
+        height: calc(3em - 1em);
         width: 3.8em;
 
         background-color: var(--background-color3);
@@ -197,6 +211,8 @@ footer p { /* Texto do rodapé */
         display: flex;
 
         margin: .3em 0;
+
+        margin-right: 10px;
     }
     label { /* Titulo das aréas */
         display: block;
@@ -205,41 +221,79 @@ footer p { /* Texto do rodapé */
         margin-right: 1em;
         margin-bottom: 0;
 
-        padding: .3em 0;
+        padding: .2em 0 .4em;
         
-        font-size: .4em;
+        font-size: .38em;
         font-weight: bold;
     }
-    #login,
-    #senha { /* aréas de informação */
-        width: 10em;
+    .btn { /* aréas de informação */
+        width: 12.5em;
 
-        font-size: .25em;
-        
-        border-radius: 35px;
-        border: 2px solid black;
-        
-        padding: .8em 1em;
-        
+        font-size: .22em;
+    
         z-index: 1;
     }
-    #senha { /* aréa texto */
-        margin-left: -.5em;
+
+    #correr,
+    #regis { /* botões */
+        font-size: .36em;
+        
+        margin: 0px -2em 0px 4.1em;
+
+        transform: translateY(-2.3em);
     }
 
-    #btn { /* aréa dos botões */
-        position: relative;
+     /* Registro*/
 
-        transform: translate(2em, -1em);
-        
-        font-size: .4em;
-        
-        margin-left: 1.4em;
+    #area2 {
+        margin-top: -.35em;
+     }
+    #area2 
+    legend { /* legenda do Login */
+        width: 6em;
+
+        transform: translate(3.5em, .8em);
     }
-    #regis { /* Botão Registrar */
-        margin-left: 1.2em;
+
+    #area2 
+    fieldset {
+        width: 1em;
+        height: 2.8em;
     }
+
+    #area2
+    .text {  /* divisoria das informações */
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    #area2
+    label { /* Titulo das aréas */
+        display: block;
+
+        margin-left: 0;
+        margin-right: 2em;
+        margin-bottom: 0;
+
+        padding: .3em 0;
+        
+        font-size: .35em;
+    }
+    #area2
+    .btn-sec {
+        margin-left: -8px;
+    }
+
+    #area2
+    #reg {
+        overflow-y: hidden;
     
+        padding-top: 0;
+        margin-BOTTOM: 30px;
+    }
+
+
+    /* Rodapé */
 
     footer p { /* Texto do rodapé */
         color: white;
